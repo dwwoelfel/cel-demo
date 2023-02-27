@@ -1,0 +1,17 @@
+syntax = "proto3";
+package cel_demo.request;
+
+option go_package = "request/";
+
+message Origin {
+  string ip = 1;
+  string region_code = 2;
+}
+
+message Request {
+  map<string, string> headers  = 1;
+	string method = 2; 
+	string path = 3;
+	string scheme = 4;
+	string query = 5; 
+}
